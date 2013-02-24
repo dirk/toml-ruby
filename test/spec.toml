@@ -2,6 +2,8 @@
 
 # String
 string = "string\n\t\"string"
+string_with_comment = "string with #comment"
+string_with_comment_afterwards = "string" # ignore this comment
 
 # Integer
 integer = 42
@@ -17,6 +19,16 @@ simple_array = [1, 2, 3]
 
 # Nested array
 nested_array = [[[1], 2], 3]
+
+# String array
+string_array = ["a", "b", "c"]
+
+# Array with comment in string
+array_with_comment = ["a", "b#b", "#c"]
+
+# Array with closing bracket in string
+array_with_closing_bracket = ["a", "b]b", "#c"]
+array_with_closing_bracket_and_ending_comment = ["a", "b]b", "#c"] #comment
 
 # Keygroup
 [a.b.c]
