@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = Toml::VERSION
   gem.authors       = ["Dirk Gadsden"]
   gem.email         = ["dirk@esherido.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = "Library for parsing TOML inifile format"
+  gem.summary       = "Library for parsing TOML inifile format"
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
