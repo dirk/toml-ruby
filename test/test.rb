@@ -29,10 +29,28 @@ class TestParser < MiniTest::Unit::TestCase
   def test_nested_array
     assert_equal @doc["nested_array"], [[[1], 2], 3, [4]]
   end
+  def test_string_array
+    assert_equal @doc["string_array"], ["a", "b", "c"]
+  end
   def test_simple_keygroup
     assert_equal @doc["e"]["f"], "test"
   end
   def test_nested_keygroup
     assert_equal @doc["a"]["b"]["c"]["d"], "test"
+  end
+  def test_string_with_comment
+    assert_equal @doc["string_with_comment"], "string with #comment"
+  end
+  def test_comment_after_string
+    assert_equal @doc["string_with_comment_afterwards"], "string"
+  end
+  def test_array_with_comments_in_strings
+    assert_equal @doc["array_with_comment"], ["a", "b#b", "#c"]
+  end
+  def test_array_with_closing_bracket_in_string
+    assert_equal @doc["array_with_closing_bracket"], ["a", "b]b", "#c"]
+  end
+  def test_array_with_closing_bracket_in_string_and_comment
+    assert_equal @doc["array_with_closing_bracket_and_ending_comment"], ["a", "b]b", "#c"]
   end
 end

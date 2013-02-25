@@ -14,7 +14,7 @@ module Toml
       
       if line =~ /^\[([^\]]+)\]/
         @key_group = $1.split('.')
-      elsif line =~/^(\S+)\s*=\s*([^#]+)\s*/
+      elsif line =~/^(\S+)\s*=\s*(.+)\s*/
         key = $1
         pos, value = parse_value($2)
         # TODO: Make sure has parsed entire line?
