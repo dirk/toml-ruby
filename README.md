@@ -1,6 +1,10 @@
-# Toml::Ruby
+# Note!
 
-TODO: Write a gem description
+This gem has been deprecated/orphaned in favor of the `toml` gem: https://github.com/jm/toml
+
+# Toml-Ruby
+
+TOML parser in ruby.
 
 ## Installation
 
