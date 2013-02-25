@@ -16,7 +16,7 @@ datetime = 1979-05-27T07:32:00Z
 simple_array = [1, 2, 3]
 
 # Nested array
-nested_array = [[[1], 2], 3]
+nested_array = [[[1], 2], 3, [4]]
 
 # Keygroup
 [a.b.c]

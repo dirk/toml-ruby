@@ -87,8 +87,10 @@ module Toml
       elsif val.start_with? '['
         a = []
         p = 1
+        
         while (val.slice!(0, p) && (val.strip! || true) && !val.start_with?("]"))
           val.slice!(0) if val[0] == "," # Remove comma if it's there.
+          break if val.empty?
           p, v = parse_value(val)
           a << v
         end

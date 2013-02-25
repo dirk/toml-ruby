@@ -27,7 +27,7 @@ class TestParser < MiniTest::Unit::TestCase
     assert_equal @doc["simple_array"], [1, 2, 3]
   end
   def test_nested_array
-    assert_equal @doc["nested_array"], [[[1], 2], 3]
+    assert_equal @doc["nested_array"], [[[1], 2], 3, [4]]
   end
   def test_simple_keygroup
     assert_equal @doc["e"]["f"], "test"
